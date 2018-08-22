@@ -1,6 +1,7 @@
 package com.vistorieja.emailws;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,21 +15,34 @@ public class EmailWsController {
     @Autowired
     private MailSender mailSender;
 
-    @RequestMapping(path = "/email-send/{email}/{msg}", method = RequestMethod.GET)
-    public String sendMail(@PathVariable("email") String email, @PathVariable("msg") String msg) {
+    @RequestMapping(path = "/email-send/{email}/{user}/{pass}", method = RequestMethod.GET)
+    public HttpStatus sendMail(@PathVariable("email") String email, @PathVariable("user") String user, @PathVariable("pass") String pass) {
         SimpleMailMessage message = new SimpleMailMessage();
 
-        message.setText(msg);
         message.setTo(email);
-        message.setFrom("contato@vistorieja.com");
-        message.setSubject("Hello Kibixinha");
+        montarEmail(user, message, pass);
 
         try {
             mailSender.send(message);
-            return "Email enviado com sucesso!";
+            return HttpStatus.OK;
         } catch (Exception e) {
             e.printStackTrace();
-            return "Erro ao enviar email.";
+            return HttpStatus.NOT_FOUND;
         }
+    }
+
+    private void montarEmail(String usuario, SimpleMailMessage email, String newPassword) {
+
+        email.setSubject("[VistorieJá] - Recuperação de Senha");
+        email.setFrom("contato@vistorieja.com");
+        String corpoMsg =
+                "\nBem-vindo, " + usuario + " \n" +
+                        "Sua senha é: " + newPassword + "\n" +
+                        "\n\n"
+                        + "Atenciosamente,\n"
+                        + "Formulário de Contato - VistorieJá \n\n"
+                        + "E-mail: contato@vistorieja.com \n"
+                        + "http://www.vistorieja.com.br \n";
+        email.setText(corpoMsg);
     }
 }
