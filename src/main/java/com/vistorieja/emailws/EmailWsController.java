@@ -42,7 +42,7 @@ public class EmailWsController {
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
                         + "E-mail: contato@vistorieja.com \n"
-                        + "http://www.vistorieja.com.br \n";
+                        + "http://www.vistorieja.com \n";
         email.setText(corpoMsg);
     }
 }
