@@ -36,8 +36,8 @@ public class EmailWsController {
         email.setSubject("[VistorieJá] - Recuperação de Senha");
         email.setFrom("contato@vistorieja.com");
         String corpoMsg =
-                "\nBem-vindo, " + usuario + " \n" +
-                        "Sua senha é: " + newPassword + "\n" +
+                "\nOlá, " + usuario + " \n" +
+                        "Sua nova senha é: " + newPassword + "\n" +
                         "\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
