@@ -48,7 +48,7 @@ public class EmailWsController {
         SimpleMailMessage message = new SimpleMailMessage();
 
         message.setTo(email);
-        montarEmailConfirmacao(user, message);
+        montarEmailConfirmacao(user, message,email);
 
         return sendMail(message);
     }
@@ -68,23 +68,23 @@ public class EmailWsController {
         email.setText(corpoMsg);
     }
 
-    private void montarEmailConfirmacao(String usuario, SimpleMailMessage email) {
+    private void montarEmailConfirmacao(String usuario, SimpleMailMessage message, String email) {
 
-        email.setSubject("[VistorieJá] - Confirme seu cadastro");
-        email.setFrom("contato@vistorieja.com");
+        message.setSubject("[VistorieJá] - Confirme seu cadastro");
+        message.setFrom("contato@vistorieja.com");
         String corpoMsg =
                 "\nOlá, " + usuario + " \n" +
                         "Seja muito bem-vindo(a) ao VistorieJá" +
                         "\n\n"
                         + "Por favor confirme o seu email acessando o link abaixo:" +
                         "\n\n"
-                        + "http://www.vistorieja.com/email/confirm?key=" + CriptoUtil.encrypt(usuario)
+                        + "http://www.vistorieja.com/rest/confirmation/" + CriptoUtil.encrypt(usuario)
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
                         + "E-mail: contato@vistorieja.com \n"
                         + "http://www.vistorieja.com \n";
-        email.setText(corpoMsg);
+        message.setText(corpoMsg);
     }
 
 }
