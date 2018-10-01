@@ -70,12 +70,12 @@ public class EmailWsController {
                 "\nOlá, " + user + " \n" +
                         "Para alterar a senha, por favor clique no link abaixo:" +
                         "\n\n"
-                        + "http://www.vistorieja.com/rest/esqueci/key=" + CriptoUtil.encrypt(email)
+                        + "http://www.vistorieja.com.br/rest/esqueci/key=" + CriptoUtil.encrypt(email)
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
                         + "E-mail: contato@vistorieja.com \n"
-                        + "http://www.vistorieja.com \n";
+                        + "http://www.vistorieja.com.br \n";
         message.setText(corpoMsg);
     }
 
@@ -89,12 +89,12 @@ public class EmailWsController {
                         "\n\n"+
                         "Para alterar a senha, por favor clique no link abaixo:" +
                         "\n\n"
-                        + "http://www.vistorieja.com/rest/esqueci/key=" + CriptoUtil.encrypt(usuario)
+                        + "http://www.vistorieja.com.br/rest/esqueci/key=" + CriptoUtil.encrypt(usuario)
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
                         + "E-mail: contato@vistorieja.com \n"
-                        + "http://www.vistorieja.com \n";
+                        + "http://www.vistorieja.com.br \n";
         email.setText(corpoMsg);
     }
 
@@ -108,12 +108,12 @@ public class EmailWsController {
                         "\n\n"
                         + "Por favor confirme o seu email acessando o link abaixo:" +
                         "\n\n"
-                        + "http://www.vistorieja.com/rest/confirmation/" + CriptoUtil.encrypt(usuario)
+                        + "http://www.vistorieja.com.br/rest/confirmation/" + CriptoUtil.encrypt(usuario)
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
                         + "E-mail: contato@vistorieja.com \n"
-                        + "http://www.vistorieja.com \n";
+                        + "http://www.vistorieja.com.br \n";
         message.setText(corpoMsg);
     }
 
