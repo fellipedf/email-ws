@@ -68,9 +68,7 @@ public class EmailWsController {
         message.setFrom("contato@vistorieja.com");
         String corpoMsg =
                 "\nOlá, " + user + " \n" +
-                        "Seja muito bem-vindo(a) ao VistorieJá" +
-                        "\n\n"
-                        + "Por favor confirme o seu email acessando o link abaixo:" +
+                        "Para alterar a senha, por favor clique no link abaixo:" +
                         "\n\n"
                         + "http://www.vistorieja.com/rest/esqueci/key=" + CriptoUtil.encrypt(email)
                         +"\n\n"
@@ -88,7 +86,11 @@ public class EmailWsController {
         String corpoMsg =
                 "\nOlá, " + usuario + " \n" +
                         "Sua nova senha é: " + newPassword + "\n" +
+                        "\n\n"+
+                        "Para alterar a senha, por favor clique no link abaixo:" +
                         "\n\n"
+                        + "http://www.vistorieja.com/rest/esqueci/key=" + CriptoUtil.encrypt(usuario)
+                        +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
                         + "E-mail: contato@vistorieja.com \n"
