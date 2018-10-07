@@ -53,7 +53,7 @@ public class EmailWsController {
         return sendMail(message);
     }
 
-    @RequestMapping(path = "/email-send/change-password/{email}", method = RequestMethod.GET)
+    @RequestMapping(path = "/email-send/change-password/{email}/{user}", method = RequestMethod.GET)
     public HttpStatus sendMailChangePassword(@PathVariable("email") String email, @PathVariable("user") String user){
         SimpleMailMessage message = new SimpleMailMessage();
 
@@ -62,6 +62,19 @@ public class EmailWsController {
 
         return sendMail(message);
     }
+
+    @RequestMapping(path = "/email-send/change-password-sucess/{email}/{user}", method = RequestMethod.GET)
+    public HttpStatus sendMailConfirmationPasswordChanged(@PathVariable("email") String email, @PathVariable("user") String user){
+        SimpleMailMessage message = new SimpleMailMessage();
+
+        message.setTo(email);
+        montarEmailConfirmacao(user, message,email);
+
+        return sendMail(message);
+    }
+
+
+
 
     private void montarEmailMudarSenha(SimpleMailMessage message, String email, String user) {
         message.setSubject("[VistorieJá] - Confirme seu cadastro");
@@ -74,7 +87,7 @@ public class EmailWsController {
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
-                        + "E-mail: contato@vistorieja.com \n"
+                        + "E-mail: contato@vistorieja.com.br \n"
                         + "http://www.vistorieja.com.br \n";
         message.setText(corpoMsg);
     }
@@ -89,11 +102,11 @@ public class EmailWsController {
                         "\n\n"+
                         "Para alterar a senha, por favor clique no link abaixo:" +
                         "\n\n"
-                        + "http://www.vistorieja.com.br/rest/esqueci/key=" + CriptoUtil.encrypt(usuario)
+                        + "http://www.vistorieja.com.br/esqueci/key=" + CriptoUtil.encrypt(usuario)
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
-                        + "E-mail: contato@vistorieja.com \n"
+                        + "E-mail: contato@vistorieja.com.br \n"
                         + "http://www.vistorieja.com.br \n";
         email.setText(corpoMsg);
     }
@@ -112,7 +125,22 @@ public class EmailWsController {
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
-                        + "E-mail: contato@vistorieja.com \n"
+                        + "E-mail: contato@vistorieja.com.br \n"
+                        + "http://www.vistorieja.com.br \n";
+        message.setText(corpoMsg);
+    }
+
+    private void montarEmailConfirmacaoAlteracaoSenha(String usuario, SimpleMailMessage message, String email) {
+
+        message.setSubject("[VistorieJá] - Confirme seu cadastro");
+        message.setFrom("contato@vistorieja.com");
+        String corpoMsg =
+                "\nOlá, " + usuario + " \n" +
+                        "Sua senha foi alterada com sucesso!"
+                        +"\n\n"
+                        + "Atenciosamente,\n"
+                        + "Formulário de Contato - VistorieJá \n\n"
+                        + "E-mail: contato@vistorieja.com.br \n"
                         + "http://www.vistorieja.com.br \n";
         message.setText(corpoMsg);
     }
