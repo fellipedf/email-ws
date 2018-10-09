@@ -121,7 +121,7 @@ public class EmailWsController {
                         "\n\n"
                         + "Por favor confirme o seu email acessando o link abaixo:" +
                         "\n\n"
-                        + "http://www.vistorieja.com.br/rest/confirmation/" + CriptoUtil.encrypt(usuario)
+                        + "http://www.vistorieja.com.br/rest/confirmation/" + CriptoUtil.encrypt(email)
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
