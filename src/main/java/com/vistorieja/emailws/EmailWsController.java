@@ -102,7 +102,7 @@ public class EmailWsController {
                         "\n\n"+
                         "Para alterar a senha, por favor clique no link abaixo:" +
                         "\n\n"
-                        + "http://www.vistorieja.com.br/esqueci"
+                        + "http://www.vistorieja.com.br/esqueci/"+ CriptoUtil.encrypt(usuario)
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
