@@ -83,7 +83,7 @@ public class EmailWsController {
                 "\nOlá, " + user + " \n" +
                         "Para alterar a senha, por favor clique no link abaixo:" +
                         "\n\n"
-                        + "http://www.vistorieja.com.br/rest/esqueci/key=" + CriptoUtil.encrypt(email)
+                        + "http://www.vistorieja.com.br/rest/usuario/esqueci/" + CriptoUtil.encrypt(email)
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
@@ -102,7 +102,7 @@ public class EmailWsController {
                         "\n\n"+
                         "Para alterar a senha, por favor clique no link abaixo:" +
                         "\n\n"
-                        + "http://www.vistorieja.com.br/esqueci/"+ CriptoUtil.encrypt(usuario)
+                        + "http://www.vistorieja.com.br/rest/usuario/esqueci/" + CriptoUtil.encrypt(email)
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
@@ -121,7 +121,7 @@ public class EmailWsController {
                         "\n\n"
                         + "Por favor confirme o seu email acessando o link abaixo:" +
                         "\n\n"
-                        + "http://www.vistorieja.com.br/rest/confirmation/" + CriptoUtil.encrypt(email)
+                        + "http://www.vistorieja.com.br/rest/usuario/confirmation/" + CriptoUtil.encrypt(email)
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
@@ -139,7 +139,7 @@ public class EmailWsController {
                         "Sua senha foi alterada com sucesso!"+
                         "\n\n"
                         + "Por favor confirme o seu email acessando o link abaixo:" +
-                        "\n\n"+ "http://www.vistorieja.com.br/rest/confirmation/" + CriptoUtil.encrypt(email)
+                        "\n\n"+ "http://www.vistorieja.com.br/rest/usuario/confirmation/" + CriptoUtil.encrypt(email)
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
