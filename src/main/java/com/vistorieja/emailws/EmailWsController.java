@@ -83,7 +83,7 @@ public class EmailWsController {
                 "\nOlá, " + user + " \n" +
                         "Para alterar a senha, por favor clique no link abaixo:" +
                         "\n\n"
-                        + "http://www.vistorieja.com.br/rest/usuario/esqueci/" + CriptoUtil.encrypt(email)
+                        + "http://www.vistorieja.com.br/esqueci"
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
@@ -102,7 +102,7 @@ public class EmailWsController {
                         "\n\n"+
                         "Para alterar a senha, por favor clique no link abaixo:" +
                         "\n\n"
-                        + "http://www.vistorieja.com.br/rest/usuario/esqueci/" + CriptoUtil.encrypt(usuario)
+                        + "http://www.vistorieja.com.br/rest/usuario/esqueci"
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
