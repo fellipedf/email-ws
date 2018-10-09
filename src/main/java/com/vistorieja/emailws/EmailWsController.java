@@ -68,7 +68,7 @@ public class EmailWsController {
         SimpleMailMessage message = new SimpleMailMessage();
 
         message.setTo(email);
-        montarEmailConfirmacao(user, message,email);
+        montarEmailConfirmacaoAlteracaoSenha(user, message,email);
 
         return sendMail(message);
     }
@@ -136,7 +136,10 @@ public class EmailWsController {
         message.setFrom("contato@vistorieja.com");
         String corpoMsg =
                 "\nOlá, " + usuario + " \n" +
-                        "Sua senha foi alterada com sucesso!"
+                        "Sua senha foi alterada com sucesso!"+
+                        "\n\n"
+                        + "Por favor confirme o seu email acessando o link abaixo:" +
+                        "\n\n"+ "http://www.vistorieja.com.br/rest/confirmation/" + CriptoUtil.encrypt(usuario)
                         +"\n\n"
                         + "Atenciosamente,\n"
                         + "Formulário de Contato - VistorieJá \n\n"
