@@ -160,9 +160,9 @@ public class EmailWsController {
         message.setSubject("[VistorieJá] - Boas vindas");
         message.setFrom("contato@vistorieja.com");
         String corpoMsg = " Olá, "+ usuario + "\n" +
-                "    Muito obrigado por se cadastrar no VistorieJá! Agora você tem acesso a melhor\n" +
-                "    plataforma de vistorias online\n" +
-                "    Aqui nós garantimos um trabalho excelente, vamos começar?"
+                "Muito obrigado por se cadastrar no VistorieJá! " +
+                "Agora você tem acesso a melhor plataforma de vistorias online.\n" +
+                "Aqui nós garantimos um trabalho excelente, vamos começar?"
                 + "Acesse o link: http://www.vistorieja.com.br"
                 + "Atenciosamente,\n"
                 + "Formulário de Contato - VistorieJá \n\n"
