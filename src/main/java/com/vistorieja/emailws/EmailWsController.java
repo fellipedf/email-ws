@@ -73,8 +73,15 @@ public class EmailWsController {
         return sendMail(message);
     }
 
+    @RequestMapping(path = "/email-send/signup-sucess/{email}/{user}", method = RequestMethod.GET)
+    public HttpStatus sendEmailConfirmationSignup(@PathVariable("email") String email, @PathVariable("user") String user){
+        SimpleMailMessage message = new SimpleMailMessage();
 
+        message.setTo(email);
+        montarEmailConfirmacaoCadastro(user, message,email);
 
+        return sendMail(message);
+    }
 
     private void montarEmailMudarSenha(SimpleMailMessage message, String email, String user) {
         message.setSubject("[VistorieJá] - Confirme seu cadastro");
@@ -145,6 +152,22 @@ public class EmailWsController {
                         + "Formulário de Contato - VistorieJá \n\n"
                         + "E-mail: contato@vistorieja.com.br \n"
                         + "http://www.vistorieja.com.br \n";
+        message.setText(corpoMsg);
+    }
+
+    private void montarEmailConfirmacaoCadastro(String usuario, SimpleMailMessage message, String email) {
+
+        message.setSubject("[VistorieJá] - Confirme seu cadastro");
+        message.setFrom("contato@vistorieja.com");
+        String corpoMsg = " Olá, "+ usuario + "\n" +
+                "    Muito obrigado por se cadastrar no VistorieJá! Agora você tem acesso a melhor\n" +
+                "    plataforma de vistorias online\n" +
+                "    Aqui nós garantimos um trabalho excelente, vamos começar?"
+                + "Acesse o link: http://www.vistorieja.com.br"
+                + "Atenciosamente,\n"
+                + "Formulário de Contato - VistorieJá \n\n"
+                + "E-mail: contato@vistorieja.com.br \n"
+                + "http://www.vistorieja.com.br \n";
         message.setText(corpoMsg);
     }
 
