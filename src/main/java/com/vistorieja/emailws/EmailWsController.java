@@ -157,7 +157,7 @@ public class EmailWsController {
 
     private void montarEmailConfirmacaoCadastro(String usuario, SimpleMailMessage message, String email) {
 
-        message.setSubject("[VistorieJá] - Confirme seu cadastro");
+        message.setSubject("[VistorieJá] - Boas vindas");
         message.setFrom("contato@vistorieja.com");
         String corpoMsg = " Olá, "+ usuario + "\n" +
                 "    Muito obrigado por se cadastrar no VistorieJá! Agora você tem acesso a melhor\n" +
