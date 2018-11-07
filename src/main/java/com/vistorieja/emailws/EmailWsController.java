@@ -162,8 +162,8 @@ public class EmailWsController {
         String corpoMsg = " Olá, "+ usuario + "\n" +
                 "Muito obrigado por se cadastrar no VistorieJá! " +
                 "Agora você tem acesso a melhor plataforma de vistorias online.\n" +
-                "Aqui nós garantimos um trabalho excelente, vamos começar?"
-                + "Acesse o link: http://www.vistorieja.com.br"
+                "Aqui nós garantimos um trabalho excelente, vamos começar?\n"
+                + "Acesse o link: http://www.vistorieja.com.br\n"
                 + "Atenciosamente,\n"
                 + "Formulário de Contato - VistorieJá \n\n"
                 + "E-mail: contato@vistorieja.com.br \n"
