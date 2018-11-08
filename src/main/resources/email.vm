@@ -1,0 +1,18 @@
+<html>
+<body>
+<div>
+    <img src="cid:logo" alt="VistorieJá">
+</div>
+<h3>Ol&aacute;, ${usuario}</h3>
+<p>Seja muito bem-vindo(a) ao <span style="color:#0053a0; font-weight: bold">VistorieJ&aacute;</span></p>
+Por favor confirme o seu email acessando o link abaixo:<br/>
+    ${link}<br/>
+
+<br/>
+<br/>
+<br/>
+
+<span style="color: #12528e; font-size: 11px">Configura&ccedil;&otilde;es de notifica&ccedil;&otilde;es / Pol&iacute;tica de privacidade / Termos<br/>
+<a href="http://www.vistorieja.com.br" style="text-decoration: none;color: #12528e;">VistorieJ&aacute;-2018</a> </span>
+</body>
+</html>
