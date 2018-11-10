@@ -1,13 +1,13 @@
 <html>
 <body>
 <div>
-    <img src="cid:logo" alt="VistorieJá">
+    <img src="cid:image" alt="header_email">
 </div>
 <br/>
 <h3>Ol&aacute;, ${usuario}</h3>
-<p>Muito obrigado por se cadastrar no VistorieJá! Agora você tem acesso a melhor
+<p>Muito obrigado por se cadastrar no VistorieJ&aacute;! Agora voc&ecirc; tem acesso a melhor
     plataforma de vistorias online</p><br/>
-<span>Aqui nós garantimos um trabalho excelente, vamos começar?</span><br/>
+<span>Aqui n&oacute;s garantimos um trabalho excelente, vamos começar?</span><br/>
 <button value="Clique aqui" style="background-color: #12528e; color: #ffffff;">
     <a href="http://www.vistorieja.com.br"></a>
 </button>
