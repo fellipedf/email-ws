@@ -1,0 +1,21 @@
+<html>
+<body>
+<div>
+    <img src="cid:logo" alt="VistorieJá">
+</div>
+<h3>Ol&aacute;, ${usuario}</h3>
+<p>Muito obrigado por se cadastrar no VistorieJá! Agora você tem acesso a melhor
+    plataforma de vistorias online</p><br/>
+<span>Aqui nós garantimos um trabalho excelente, vamos começar?</span><br/>
+<button value="Clique aqui" style="background-color: #12528e; color: #ffffff;">
+    <a href="http://www.vistorieja.com.br"></a>
+</button>
+
+<br/>
+<br/>
+<br/>
+
+<span style="color: #12528e; font-size: 11px">Configura&ccedil;&otilde;es de notifica&ccedil;&otilde;es / Pol&iacute;tica de privacidade / Termos<br/>
+<a href="http://www.vistorieja.com.br" style="text-decoration: none;color: #12528e;">VistorieJ&aacute;-2018</a> </span>
+</body>
+</html>

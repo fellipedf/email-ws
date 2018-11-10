@@ -1,0 +1,17 @@
+<html>
+<body>
+<div>
+    <img src="cid:logo" alt="VistorieJá">
+</div>
+<h3>Ol&aacute;, ${usuario}</h3>
+<p>Sua nova senha é: ${newPassword}<br/>
+    Para alterar a senha, por favor clique no link abaixo:</p><br/>
+${link}
+<br/>
+<br/>
+<br/>
+
+<span style="color: #12528e; font-size: 11px">Configura&ccedil;&otilde;es de notifica&ccedil;&otilde;es / Pol&iacute;tica de privacidade / Termos<br/>
+<a href="http://www.vistorieja.com.br" style="text-decoration: none;color: #12528e;">VistorieJ&aacute;-2018</a> </span>
+</body>
+</html>
