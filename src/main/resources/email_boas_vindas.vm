@@ -5,12 +5,12 @@
 </div>
 <br/>
 <h3>Ol&aacute;, ${usuario}</h3>
-<p>Muito obrigado por se cadastrar no VistorieJ&aacute;! Agora voc&ecirc; tem acesso a melhor
-    plataforma de vistorias online</p><br/>
-<span>Aqui n&oacute;s garantimos um trabalho excelente, vamos come&ccedil;ar?</span><br/>
-<table cellspacing="0" cellpadding="0">
+<p><span style="font-size: 17px;">Muito obrigado por se cadastrar no VistorieJ&aacute;! Agora voc&ecirc; tem acesso a melhor
+    plataforma de vistorias online</span></p><br/>
+<span style="font-size: 17px;">Aqui n&oacute;s garantimos um trabalho excelente, vamos come&ccedil;ar?</span><br/><br/>
+<table cellspacing="0" cellpadding="0" style="width: 100%;position: relative;padding-left: 30%">
     <tr>
-        <td align="center" width="300" height="40" bgcolor="#4576B5" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; color: #ffffff; display: block;">
+        <td align="center" width="200" height="40" bgcolor="#4576B5" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; color: #ffffff; display: block;">
             <a href="http://www.vistorieja.com.br" style="font-size:16px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; text-decoration: none; line-height:40px; width:100%; display:inline-block"><span style="color: #FFFFFF">Clique aqui</span></a>
         </td>
     </tr>
