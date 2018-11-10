@@ -117,7 +117,7 @@ public class EmailWsController {
                 // --Create the image part of the message
                 MimeBodyPart mimeImage = new MimeBodyPart();
                 DataSource ds = new URLDataSource(
-                        classLoader.getResource("images/logo_azul.png"));
+                        classLoader.getResource("images/header_email.png"));
                 mimeImage.setDataHandler(new DataHandler(ds));
                 mimeImage.setHeader("Content-ID", "logo");
 
