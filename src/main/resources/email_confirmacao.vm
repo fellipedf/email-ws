@@ -5,7 +5,7 @@
 </div>
 <br/>
 <h3>Ol&aacute;, ${usuario}</h3>
-<p>Seja muito bem-vindo(a) ao <span style="color:#0053a0; font-weight: bold">VistorieJ&aacute;</span></p>
+<p>Seja muito bem-vindo(a) ao <span style="color:#214474; font-weight: bold">VistorieJ&aacute;</span></p>
 Por favor confirme o seu email acessando o link abaixo:<br/>
     ${link}<br/>
 
