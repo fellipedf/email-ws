@@ -37,8 +37,8 @@ public class EmailWsController {
     public static final String VISTORIE_JÁ_BEM_VINDO = "[VistorieJá] - Bem vindo";
     public static final String VISTORIE_JA_ALTERACAO = "[VistorieJá] - Esqueci a senha";
     public static final String VISTORIE_JA_CONFIRMACAO = "[VistorieJá] - Confirmação de cadastro";
-    public static final String TEMPLATE_CONFIRMACAO = "email_boas_vindas.vm";
-    public static final String TEMPLATE_BOAS_VINDAS = "email_confirmacao.vm";
+    public static final String TEMPLATE_CONFIRMACAO = "email_confirmacao.vm";
+    public static final String TEMPLATE_BOAS_VINDAS = "email_boas_vindas.vm";
     public static final String TEMPLATE_ALTERACAO_SENHA = "email_alteracao_senha.vm";
 
     @Autowired
