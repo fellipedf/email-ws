@@ -3,6 +3,7 @@
 <div>
     <img src="cid:logo" alt="VistorieJá">
 </div>
+<br/>
 <h3>Ol&aacute;, ${usuario}</h3>
 <p>Sua nova senha é: ${newPassword}<br/>
     Para alterar a senha, por favor clique no link abaixo:</p><br/>

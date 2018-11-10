@@ -3,6 +3,7 @@
 <div>
     <img src="cid:logo" alt="VistorieJá">
 </div>
+<br/>
 <h3>Ol&aacute;, ${usuario}</h3>
 <p>Muito obrigado por se cadastrar no VistorieJá! Agora você tem acesso a melhor
     plataforma de vistorias online</p><br/>
