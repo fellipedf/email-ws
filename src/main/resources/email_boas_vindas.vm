@@ -8,10 +8,13 @@
 <p>Muito obrigado por se cadastrar no VistorieJ&aacute;! Agora voc&ecirc; tem acesso a melhor
     plataforma de vistorias online</p><br/>
 <span>Aqui n&oacute;s garantimos um trabalho excelente, vamos come&ccedil;ar?</span><br/>
-<button value="Clique aqui" style="background-color: #12528e; color: #ffffff;">
-    <a href="http://www.vistorieja.com.br"></a>
-</button>
-
+<table cellspacing="0" cellpadding="0">
+    <tr>
+        <td align="center" width="300" height="40" bgcolor="#4576B5" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; color: #ffffff; display: block;">
+            <a href="http://www.vistorieja.com.br" style="font-size:16px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; text-decoration: none; line-height:40px; width:100%; display:inline-block"><span style="color: #FFFFFF">Clique aqui</span></a>
+        </td>
+    </tr>
+</table>
 <br/>
 <br/>
 <br/>

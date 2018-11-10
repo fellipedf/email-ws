@@ -69,10 +69,10 @@ public class EmailWsController {
     }
 
 
-    private HttpStatus montarEnvioEmail(String email, String usuario, String vistorieJáBemVindo, String templateBoasVindas) {
+    private HttpStatus montarEnvioEmail(String email, String usuario, String assunto, String template) {
         MimeMessagePreparator prep;
         try {
-            prep = criarEmailTemplate(email, usuario, vistorieJáBemVindo, templateBoasVindas);
+            prep = criarEmailTemplate(email, usuario, assunto, template);
             javaMailSender.send(prep);
             return HttpStatus.OK;
         } catch (MessagingException e) {
