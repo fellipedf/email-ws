@@ -5,7 +5,7 @@
 </div>
 <br/>
 <h3>Ol&aacute;, ${usuario}</h3>
-<p>Sua nova senha é: ${newPassword}<br/>
+<p>Sua nova senha &eacute: ${newPassword}<br/>
     Para alterar a senha, por favor clique no link abaixo:</p><br/>
 ${link}
 <br/>
