@@ -46,28 +46,28 @@ public class EmailWsController {
     @RequestMapping(path = "/email-send/confirmation/{email}/{user}", method = RequestMethod.GET)
     public HttpStatus sendMimeEmail(@PathVariable("email") String email, @PathVariable("user") String usuario){
         MimeMessagePreparator prep = null;
-        return montarEnvioEmail(email, usuario, VISTORIE_JÁ_BEM_VINDO, TEMPLATE_BOAS_VINDAS, null);
+        return montarEnvioEmail(email, usuario, VISTORIE_JÁ_BEM_VINDO, TEMPLATE_BOAS_VINDAS);
     }
 
 
-    @RequestMapping(path = "/email-send/{email}/{user}/{pass}", method = RequestMethod.GET)
-    public HttpStatus sendMail(@PathVariable("email") String email, @PathVariable("user") String usuario, @PathVariable("pass") String pass) {
+    @RequestMapping(path = "/email-send/{email}/{user}", method = RequestMethod.GET)
+    public HttpStatus sendMail(@PathVariable("email") String email, @PathVariable("user") String usuario) {
         MimeMessagePreparator prep = null;
-        return montarEnvioEmail(email, usuario, VISTORIE_JA_ALTERACAO, TEMPLATE_ALTERACAO_SENHA, pass);
+        return montarEnvioEmail(email, usuario, VISTORIE_JA_ALTERACAO, TEMPLATE_ALTERACAO_SENHA);
     }
 
 
     @RequestMapping(path = "/email-send/signup-sucess/{email}/{user}", method = RequestMethod.GET)
     public void sendEmailConfirmationSignup(@PathVariable("email") String email, @PathVariable("user") String usuario) throws MessagingException {
-        MimeMessagePreparator prep = criarEmailTemplate(email, usuario,VISTORIE_JA_CONFIRMACAO, TEMPLATE_CONFIRMACAO, null);
+        MimeMessagePreparator prep = criarEmailTemplate(email, usuario,VISTORIE_JA_CONFIRMACAO, TEMPLATE_CONFIRMACAO);
         javaMailSender.send(prep);
     }
 
 
-    private HttpStatus montarEnvioEmail(String email, String usuario, String vistorieJáBemVindo, String templateBoasVindas, String senha) {
+    private HttpStatus montarEnvioEmail(String email, String usuario, String vistorieJáBemVindo, String templateBoasVindas) {
         MimeMessagePreparator prep;
         try {
-            prep = criarEmailTemplate(email, usuario, vistorieJáBemVindo, templateBoasVindas, senha);
+            prep = criarEmailTemplate(email, usuario, vistorieJáBemVindo, templateBoasVindas);
             javaMailSender.send(prep);
             return HttpStatus.OK;
         } catch (MessagingException e) {
@@ -76,7 +76,7 @@ public class EmailWsController {
     }
 
 
-    private MimeMessagePreparator criarEmailTemplate(String email,String usuario, String assunto, String template, String newPassword) throws MessagingException {
+    private MimeMessagePreparator criarEmailTemplate(String email,String usuario, String assunto, String template) throws MessagingException {
         return new MimeMessagePreparator() {
             @Override
             public void prepare(MimeMessage mimeMessage) throws Exception {
