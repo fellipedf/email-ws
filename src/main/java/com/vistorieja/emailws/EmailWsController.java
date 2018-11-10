@@ -102,7 +102,6 @@ public class EmailWsController {
                     case TEMPLATE_BOAS_VINDAS:
                         break;
                     case TEMPLATE_ALTERACAO_SENHA:
-                        model.put("newPassword", newPassword);
                         model.put("link", "http://www.vistorieja.com.br/updatePassword");
                         break;
                 }
