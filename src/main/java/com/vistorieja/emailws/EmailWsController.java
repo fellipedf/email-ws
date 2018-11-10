@@ -17,11 +17,16 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.URLDataSource;
+import javax.imageio.ImageIO;
 import javax.mail.MessagingException;
 import javax.mail.Multipart;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import javax.mail.util.ByteArrayDataSource;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -112,15 +117,13 @@ public class EmailWsController {
                 // --Create the HTML body part of the message
                 MimeBodyPart mimeBody = new MimeBodyPart();
                 mimeBody.setContent(text, "text/html");
-
-                // --Create the image part of the message
                 MimeBodyPart mimeImage = new MimeBodyPart();
-                DataSource ds = new URLDataSource(
-                        classLoader.getResource("images/header_email.png"));
+                DataSource ds = new URLDataSource(classLoader.getResource("images/header_email.png"));
                 mimeImage.setDataHandler(new DataHandler(ds));
-                mimeImage.setHeader("Content-ID", "logo");
+                mimeImage.setFileName("header_email.png");
+                mimeImage.setHeader("Content-ID", "<image>");
 
-                Multipart multipart = new MimeMultipart();
+                Multipart multipart = new MimeMultipart("relative");
                 multipart.addBodyPart(mimeBody);
                 multipart.addBodyPart(mimeImage);
                 mimeMessage.setContent(multipart);

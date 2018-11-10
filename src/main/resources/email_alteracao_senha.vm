@@ -1,7 +1,7 @@
 <html>
 <body>
 <div>
-    <img src="cid:logo" alt="VistorieJá">
+    <img src="cid:image" alt="header_email">
 </div>
 <br/>
 <h3>Ol&aacute;, ${usuario}</h3>
